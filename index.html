@@ -13,10 +13,10 @@
 
 <!-- Navbar -->
 <div class="bt-top">
-  <div id="navMenu" class="bt-bar bt-white bt-card bt-bar-container">
+  <div id="navMenu" class="bt-bar bt-white bt-bar-container">
     <a class="bt-bar-item bt-button bt-padding-large bt-hide-medium bt-hide-large bt-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="bt-bar-item bt-button bt-padding-small"><img src="./img/logo.jpg" style="width:162px; height:38px;"/></a>
-    <a id="home" href="#homeSec" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_active" onclick="menuClrFunc(this.id)">HOME</a>
+    <a href="#" class="bt-bar-item bt-padding-small"><img src="./img/logo.jpg" style="width:162px; height:38px;"/></a>
+    <a id="home" href="#" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_active" onclick="menuClrFunc(this.id)">HOME</a>
     <a id="about" href="#aboutSec" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">ABOUT US</a>
     <a id="products" href="#productsSec" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">PRODUCTS</a>
     <a id="contact" href="#contactSec" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">CONTACT US</a>
@@ -31,7 +31,7 @@
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="bt-bar-block bt-white bt-hide bt-hide-large bt-hide-medium bt-top" style="margin-top:46px">
-  <a href="#homeSec" class="bt-bar-item bt-button bt-padding-large subTit" onclick="myFunction()">HOME</a>
+  <a href="#" class="bt-bar-item bt-button bt-padding-large subTit" onclick="myFunction()">HOME</a>
   <a href="#aboutSec" class="bt-bar-item bt-button bt-padding-large subTit" onclick="myFunction()">ABOUT US</a>
   <a href="#productsSec" class="bt-bar-item bt-button bt-padding-large subTit" onclick="myFunction()">PRODUCTS</a>
   <a href="#contactSec" class="bt-bar-item bt-button bt-padding-large subTit" onclick="myFunction()">CONTACT US</a>
@@ -343,11 +343,11 @@
     <marquee behavior="scroll" direction="left" scrollamount="5"><img style="width:auto; height: 50px;" src="./img/arvind.png" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/raymond.png" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/linenclub.png" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/giza.png" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/reid.jpg" /></marquee>
   </div>
   <!-- The Contact Section -->
-  <div class="bt-container bt-content bt-padding-32" id="contactSec">
+  <div class="bt-container bt-content bt-padding-32" id="contactSec" style="background-color: #f2f2f2;">
     <h2 class="bt-wide mainTit bt-center">CONTACT US</h2>
     <p class="subTit bt-center">We offer premium custom tailored suits for men who see the value in looking gallant.</p>
-    <div class="bt-row bt-padding-32">
-      <div class="bt-col m6 bt-padding-small">
+    <div class="bt-row">
+      <div class="bt-col m6 bt-padding">
         <form action="/action_page.php" target="_blank">
           <input class="bt-input bt-border" type="text" placeholder="Your Name" required name="Name"><br>
           <input class="bt-input bt-border" type="text" placeholder="Your Email Address" required name="Email"><br>
@@ -355,7 +355,7 @@
           <button class="bt-button bt-black bt-section bt-right" type="submit">SEND</button>
         </form>
       </div>
-      <div class="bt-col m6 bt-large bt-margin-bottom">
+      <div class="bt-col m6 bt-padding bt-medium">
         <div class="responsive-map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1589.2455787087667!2d78.68615865062225!3d10.823826368226444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf5aef159d1ab%3A0xee8d058d4eaf70f5!2sBelmont!5e0!3m2!1sen!2sus!4v1693908409709!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -444,6 +444,11 @@ window.addEventListener('scroll', () => {
   //console.log(y);
   if (document.querySelector('.bt_btn_active'))
     document.querySelector('.bt_btn_active').classList.replace('bt_btn_active', 'bt_btn_default');
+  if(y==1) {
+    document.getElementById('navMenu').classList.remove('bt-card');
+  } else {
+    document.getElementById('navMenu').classList.add('bt-card');
+  }
   if ((y>=1) && (y<17)) {
     var x = document.getElementById("home");
     if (x.className.indexOf("bt_btn_active") == -1) {
