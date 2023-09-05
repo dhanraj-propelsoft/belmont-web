@@ -64,12 +64,14 @@ textarea{
 }
 /* End extract */
  html,body{
-    font-family:Verdana,sans-serif;
+    font-family: 'Verdana', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
     font-size:15px;
     line-height:1.5
 }
 html{
-    overflow-x:hidden
+    overflow-x:hidden;
+    scroll-behavior: smooth;
 }
  h1{
     font-size:36px
@@ -442,6 +444,9 @@ a{
  @media (max-width:1205px){
     .bt-auto{
         max-width:95%
+    }    
+    .bt-bar-container {
+        padding: 0 20vw 0 20vw;
     }
 }
  @media (max-width:600px){
@@ -467,6 +472,9 @@ a{
     }
      .bt-dropdown-hover.bt-mobile,.bt-dropdown-hover.bt-mobile .bt-btn,.bt-dropdown-hover.bt-mobile .bt-button,.bt-dropdown-click.bt-mobile,.bt-dropdown-click.bt-mobile .bt-btn,.bt-dropdown-click.bt-mobile .bt-button{
         width:100%
+    }   
+    .bt-bar-container {
+        padding: 0 10vw 0 10vw;
     }
 }
  @media (max-width:768px){
@@ -475,6 +483,9 @@ a{
     }
     .bt-modal{
         padding-top:50px
+    }   
+    .bt-bar-container {
+        padding: 0 10vw 0 10vw;
     }
 }
  @media (min-width:993px){
@@ -486,11 +497,17 @@ a{
     }
     .bt-sidebar.bt-collapse{
         display:block!important
+    }    
+    .bt-bar-container {
+        padding: 0 20vw 0 20vw;
     }
 }
  @media (max-width:992px) and (min-width:601px){
     .bt-hide-medium{
         display:none!important
+    }    
+    .bt-bar-container {
+        padding: 0 10vw 0 10vw;
     }
 }
  @media (max-width:992px){
@@ -503,6 +520,10 @@ a{
     }
     .bt-auto{
         max-width:100%
+    }
+       
+    .bt-bar-container {
+        padding: 0;
     }
 }
  .bt-top,.bt-bottom{
@@ -866,7 +887,7 @@ a{
     padding:8px 16px!important
 }
 .bt-padding-large{
-    padding:12px 24px!important
+    padding:15px 24px!important
 }
  .bt-padding-16{
     padding-top:16px!important;
@@ -907,8 +928,16 @@ a{
     float:right!important
 }
  .bt-button:hover{
-    color:#000!important;
+    color:#bf9668;
     background-color:#ccc!important
+}
+.bt_btn_default {
+    color:black;
+    font-size: 10px;
+ }
+.bt_btn_active {
+   color:#bf9668;
+   font-size: 10px;
 }
  .bt-transparent,.bt-hover-none:hover{
     background-color:transparent!important
@@ -917,7 +946,7 @@ a{
     box-shadow:none!important
 }
  .bt-white,.bt-hover-white:hover{
-    color:#000!important;
+    color:#000;
     background-color:#fff!important
 }
  .bt-black,.bt-hover-black:hover{
@@ -957,7 +986,63 @@ body {font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-r
 }
 .mySlides {display: none}
 .mySlides1 {display: none}
-.homeSlide {width:100%; height:92vh;}
+.homeSlide {width:100%; height:75vh;}
 .circleImg {width:60%; height:135px;}
 .fullWidth {width:100%}
 .w3-button>a:active{color:red!important;}
+
+.bt-sm-block{
+  padding: 10px;
+  text-align: right;
+}
+.bt-video-link { position: relative; }
+.bt-video-link img { display: block; }
+.bt-video-icon {
+    position: absolute;
+    bottom:36%;
+    left:42%;
+    color: red;
+}
+.whats-float {
+    position: fixed;
+    transform:translate(108px,0px);
+    bottom:25%;
+    right:0;
+    width:150px;
+    overflow: hidden;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 4px 0 0 4px;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+    vertical-align: middle
+}
+.whats-float a span {
+    color: white;
+    font-size: 15px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    position: absolute;
+    line-height: 16px;
+    font-weight: bolder;
+}
+
+.whats-float i {
+    font-size: 30px;
+    color: white;
+    line-height: 30px;
+    padding: 10px;
+    transform:rotate(0deg);
+    transition: all 0.5s ease-in-out;
+    text-align:center;
+
+}
+
+.whats-float:hover {
+    color: #FFFFFF;
+    transform:translate(0px,0px);
+}
+
+.whats-float:hover i  {
+    transform:rotate(360deg);
+}
