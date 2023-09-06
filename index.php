@@ -25,7 +25,7 @@ if(isset($_POST['submit']))
   $mail = new PHPMailer(true);
 
   try {
-    $mail->SMTPDebug = 2;									
+    $mail->SMTPDebug = 0;								
     $mail->isSMTP();										
     $mail->Host	 = 'smtp.gmail.com;';				
     $mail->SMTPAuth = true;							
@@ -39,7 +39,7 @@ if(isset($_POST['submit']))
     
     $mail->isHTML(true);
     $mail->Subject = 'Mail Received from BELMONT Website User';
-    $mail->Body = '<h1>This is '.$_POST['Name'].'</h1>'.$_POST['Message'].'<BR/>Reply to: '. $_POST['Email'];
+    $mail->Body = '<h1>This is '.$_POST['Name'].'</h1><p>'.$_POST['Message'].'</p>Reply to: '. $_POST['Email'];
     $mail->AltBody = 'Body in plain text for non-HTML mail clients';
     $mail->send();
     echo "<script>Swal.fire({
@@ -520,7 +520,7 @@ function menuClrFunc(ele) {
 
 window.addEventListener('scroll', () => {
   let y = Math.round(1 + (window.scrollY || window.pageYOffset) / 150);
-  //console.log(y);
+  console.log(y);
   if (document.querySelector('.bt_btn_active'))
     document.querySelector('.bt_btn_active').classList.replace('bt_btn_active', 'bt_btn_default');
   if(y==1) {
@@ -538,12 +538,12 @@ window.addEventListener('scroll', () => {
     if (x.className.indexOf("bt_btn_active") == -1) {
       x.className = x.className.replace('bt_btn_default', 'bt_btn_active');
     }
-  } else if((y>=30) && (y<44)) {
+  } else if((y>=30) && (y<43)) {
     var x = document.getElementById("products");
     if (x.className.indexOf("bt_btn_active") == -1) {
       x.className = x.className.replace('bt_btn_default', 'bt_btn_active');
     }
-  } else if(y>=44) {
+  } else if(y>=43) {
     var x = document.getElementById("contact");
     if (x.className.indexOf("bt_btn_active") == -1) {
       x.className = x.className.replace('bt_btn_default', 'bt_btn_active');
