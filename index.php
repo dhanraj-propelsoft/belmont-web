@@ -177,15 +177,15 @@ if(isset($_POST['submit']))
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="bt-row-padding bt-center">
     <div class="bt-col m4">
-      <img src="./img/home11.jpg" class="" style="width: 100%;height: 300px;">
+      <img src="./img/home11.jpg" class="bt-lb-img">
     </div>
 
     <div class="bt-col m4">
-      <img src="./img/home12.jpg" class="" style="width: 100%;height: 300px;">
+      <img src="./img/home12.jpg" class="bt-lb-img">
     </div>
 
     <div class="bt-col m4">
-      <img src="./img/home13.jpg" class="" style="width: 100%;height: 300px;">
+      <img src="./img/home13.jpg" class="bt-lb-img">
     </div>
   </div>
 </div>
@@ -206,7 +206,7 @@ if(isset($_POST['submit']))
     <div class="bt-row bt-margin">
 
       <div class="bt-third">
-        <img src="./img/about2.jpg" style="width:100%;height:275px">
+        <img src="./img/about2.jpg" class="aboutImg">
       </div>
       <div class="bt-twothird bt-container">
         <h2 class="mainTit">N.M JAINUL AUBIDEEN</h2>
@@ -218,7 +218,7 @@ if(isset($_POST['submit']))
       <div class="bt-row bt-margin">
 
       <div class="bt-third">
-        <img src="./img/about3.jpg" style="width:100%;height:275px">
+        <img src="./img/about3.jpg" class="aboutImg">
       </div>
       <div class="bt-twothird bt-container">
         <h2 class="mainTit">ABDUL KAREEM SAKLA</h2>
@@ -230,7 +230,7 @@ if(isset($_POST['submit']))
       <div class="bt-row bt-margin">
 
       <div class="bt-third">
-        <img src="./img/about4.jpg" style="width:100%;height:275px">
+        <img src="./img/about4.jpg" class="aboutImg">
       </div>
       <div class="bt-twothird bt-container">
         <h2 class="mainTit">MOHAMED HASAN</h2>
@@ -354,28 +354,28 @@ if(isset($_POST['submit']))
     <p class="subTit">QUALITY FABRIC IS IN OUR DNA. WE SOURCE FABRICS FROM SOME OF THE BEST MILLS ACROSS WORLD OUR CRAFTSMANSHIP MAKE FABRICS THAT LAST YOU A LIFETIME.</p><br>
     <div class="bt-row-padding bt-center">
       <div class="bt-col m4">
-        <img src="./img/fabrics1.jpg" class="fullWidth" alt="">
+        <img src="./img/fabrics1.jpg" class="bt-lb-img" alt="">
       </div>
 
       <div class="bt-col m4">
-        <img src="./img/fabrics2.jpg" class="fullWidth" alt="">
+        <img src="./img/fabrics2.jpg" class="bt-lb-img" alt="">
       </div>
 
       <div class="bt-col m4">
-        <img src="./img/fabrics3.jpg" class="fullWidth" alt="">
+        <img src="./img/fabrics3.jpg" class="bt-lb-img" alt="">
       </div>
     </div><br/>
     <div class="bt-row-padding bt-center">
       <div class="bt-col m4">
-        <img src="./img/fabrics4.jpg" class="fullWidth" alt="">
+        <img src="./img/fabrics4.jpg" class="bt-lb-img" alt="">
       </div>
 
       <div class="bt-col m4">
-        <img src="./img/fabrics5.jpg" class="fullWidth" alt="">
+        <img src="./img/fabrics5.jpg" class="bt-lb-img" alt="">
       </div>
 
       <div class="bt-col m4">
-        <img src="./img/fabrics6.jpg" class="fullWidth" alt="">
+        <img src="./img/fabrics6.jpg" class="bt-lb-img" alt="">
       </div>
     </div><br/>
     <marquee behavior="scroll" direction="left" scrollamount="5"><img style="width:auto; height: 50px;" src="./img/dolce.png" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/linenclub.jpg" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/raymond.jpg" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/roger.jpg" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/soktas.jpg" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/tessi.jpg" /></marquee>
