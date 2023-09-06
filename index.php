@@ -42,9 +42,9 @@ if(isset($_POST['submit']))
     });</script>";
   } else {
   echo "<script>Swal.fire({
-    title: 'Success!',
+    title: 'Error!',
     text: 'Message could not be sent...!',
-    icon: 'success',
+    icon: 'error',
     confirmButtonText: 'OK'
   });</script>";
   }
