@@ -14,9 +14,50 @@
 <body>
 <?php
 error_reporting(0);
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 if(isset($_POST['submit']))
 {
-  $to = "yazar.vr46@gmail.com";
+  require 'vendor/autoload.php';
+
+  $mail = new PHPMailer(true);
+
+  try {
+    $mail->SMTPDebug = 2;									
+    $mail->isSMTP();										
+    $mail->Host	 = 'smtp.gmail.com;';				
+    $mail->SMTPAuth = true;							
+    $mail->Username = 'yazarvale@gmail.com';				
+    $mail->Password = 'kfclevphglfzhgmh';					
+    $mail->SMTPSecure = 'tls';							
+    $mail->Port	 = 587;
+
+    $mail->setFrom('yazarvale@gmail.com', 'BELMONT Website');	
+    $mail->addAddress('yazar.vr46@gmail.com', $_POST['Name']);
+    
+    $mail->isHTML(true);
+    $mail->Subject = 'Mail Received from BELMONT Website User';
+    $mail->Body = '<h1>This is '.$_POST['Name'].'</h1>'.$_POST['Message'].'<BR/>Reply to: '. $_POST['Email'];
+    $mail->AltBody = 'Body in plain text for non-HTML mail clients';
+    $mail->send();
+    echo "<script>Swal.fire({
+      title: 'Success!',
+      text: 'Mail has been sent successfully!',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });</script>";
+  } catch (Exception $e) {
+    echo "<script>Swal.fire({
+    title: 'Error!',
+    text: 'Message could not be sent!',
+    icon: 'error',
+    confirmButtonText: 'OK'
+  });</script>";
+    //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  }
+  /*$to = "yazar.vr46@gmail.com";
   $subject = "This is subject";
 
   $message = "";
@@ -47,7 +88,7 @@ if(isset($_POST['submit']))
     icon: 'error',
     confirmButtonText: 'OK'
   });</script>";
-  }
+  }*/
 }
 ?>
 <!-- Navbar -->
