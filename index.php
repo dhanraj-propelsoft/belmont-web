@@ -7,23 +7,62 @@
 <link rel="stylesheet" href="./css/bt.css">
 <link rel="stylesheet" href="./css/Lato.css">
 <link rel="stylesheet" href="./css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/sweetalert.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </a>
 </head>
 <body>
+<?php
+error_reporting(0);
+if(isset($_POST['submit']))
+{
+  $to = "yazar.vr46@gmail.com";
+  $subject = "This is subject";
 
+  $message = "";
+  if(isset($_POST['Name']))
+    $message .= "<h1>This is ".$_POST['Name']."</h1>";
+  if(isset($_POST['Message']))
+    $message .= $_POST['Message']."<BR/>";
+  if(isset($_POST['Email']))
+    $message .= "Reply to: ". $_POST['Email'];
+
+  $header = "From:yazarvale@gmail.com \r\n";
+  $header .= "MIME-Version: 1.0\r\n";
+  $header .= "Content-type: text/html\r\n";
+
+  $retval = mail ($to,$subject,$message,$header);
+
+  if( $retval == true ) {
+    echo "<script>Swal.fire({
+      title: 'Success!',
+      text: 'Mail sent successfully...!',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });</script>";
+  } else {
+  echo "<script>Swal.fire({
+    title: 'Success!',
+    text: 'Message could not be sent...!',
+    icon: 'success',
+    confirmButtonText: 'OK'
+  });</script>";
+  }
+}
+?>
 <!-- Navbar -->
 <div class="bt-top">
   <div id="navMenu" class="bt-bar bt-white bt-bar-container">
     <a class="bt-bar-item bt-button bt-padding-large bt-hide-medium bt-hide-large bt-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="bt-bar-item bt-padding-small"><img src="./img/logo.jpg" style="width:162px; height:38px;"/></a>
+    <a href="#" class="bt-bar-item bt-padding-small"><img src="./img/logo.png" style="width:162px; height:38px;"/></a>
     <a id="home" href="#" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_active" onclick="menuClrFunc(this.id)">HOME</a>
     <a id="about" href="#aboutSec" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">ABOUT US</a>
     <a id="products" href="#productsSec" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">PRODUCTS</a>
     <a id="contact" href="#contactSec" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">CONTACT US</a>
     <div class="bt-sm-block">
-      <a href="https://www.facebook.com/belmonttailors/" target="_blank"><i class="icon fa fa-facebook white-icon"></i></a>&nbsp;
-      <a href="https://www.instagram.com/belmonttailors/" target="_blank"><i class="icon fa fa-instagram white-icon"></i></a>&nbsp;
-      <a href="https://www.youtube.com/@belmonttailors2451" target="_blank"><i class="icon fa fa-youtube white-icon"></i></a>&nbsp;
+      <a href="https://www.facebook.com/belmonttailors/" target="_blank"><i class="icon fa fa-facebook white-icon bt-padding-small"></i></a>
+      <a href="https://www.instagram.com/belmonttailors/" target="_blank"><i class="icon fa fa-instagram white-icon bt-padding-small"></i></a>
+      <a href="https://www.youtube.com/@belmonttailors2451" target="_blank"><i class="icon fa fa-youtube white-icon bt-padding-small"></i></a>
      </div>
   </div>
     
@@ -76,8 +115,8 @@
     </div>
   </div>
   <!-- Team Container -->
-  <div class="bt-content bt-container bt-padding-32 bt-center">
-    <span class="subTitle">OUR SERVICES</span><br><br>
+  <div class="bt-content bt-container bt-padding-32 bt-center" style="background-color: #f2f2f2;">
+    <span class="prodSpan">OUR SERVICES</span><br><br>
 
     <div class="bt-row">
 
@@ -89,7 +128,7 @@
 
     <div class="bt-quarter bt-padding-small">
       <img src="./img/home6.jpg" alt="" class="bt-circle circleImg">
-      <h3 class="mainTit">FABRICS</h3>
+      <h3 class="mainTit bt-serv-fab">FABRICS</h3>
       <p>Each our suit is made to your exact measurements and fit your specific body type</p>
     </div>
 
@@ -108,17 +147,13 @@
     </div>
   </div>
   
-  <div class="bt-display-container bt-wide bt-hide-small">
-    <img class="bt-image" src="./img/home9.jpg" alt="" style="width:1600px; height:260px; position: absolute;">
-    <div class="bt-row bt-padding-64 bt-text-white">
-      <div class="bt-col m9 bt-text-white bt-padding" style="position: relative;">
-        <h1 class="bt-text-white mainTit">WE DESIGN, YOU RULE</h1>
-        <p class="bt-text-white spanTitle">−−− Providing you with maximum Level of comfort & confidence in every suit!</p>
-      </div>
-      <div class="bt-col m3 bt-text-white bt-padding bt-display-right">
-        <a class="bt-button bt-white bt-padding-large bt-large bt-opacity bt-hover-opacity-off" href="#contact">CONTACT US</a>
-      </div>
+  <div class="bt-content bt-display-container bt-wide ">
+    <img class="bt-image" src="./img/home9.jpg" alt="" style="width:100%; height:260px;">
+    <div class="bt-display-left bt-text-white bt-col m8 bt-padding">
+      <h1 class="bt-text-white mainTit">WE DESIGN, YOU RULE</h1>
+      <p class="bt-text-white spanTitle">−−− Providing you with maximum Level of comfort & confidence in every suit!</p>
     </div>
+    <a class="bt-display-right bt-button bt-round bt-large bt-opacity bt-hover-opacity-off" style="color: #ffffff; background-color: #bf9668; margin-right: 16px;" href="#contact">CONTACT US</a>
   </div>
   <div class="bt-content bt-container bt-padding-32">
     <div class="bt-row">
@@ -158,10 +193,11 @@
   <div class="bt-container bt-content bt-center bt-padding-32" id="aboutSec">
     <h2 class="bt-wide mainTit">ABOUT US</h2>
     <header class="bt-display-container bt-wide bt-padding-32">
-      <img class="bt-image" src="./img/about1.jpg" alt="" style="width:1200px; height:250px;">
-      <div class="bt-display-left bt-col m6 bt-text-white bt-padding-small">
-        <p>Since 1967. Belmont has cherished the needs of the customers. We carry values and maintain culture throughout our journey. We believe tailoring is an Art. Measurement is an Art, execution and finishing is an Art.</p>
-        
+      <div style="width:100%; height:250px; background-color: black;">
+        <img class="bt-display-right bt-image" src="./img/about1.jpg" alt="" style="width:auto; height:250px;">
+        <div class="bt-display-left bt-col m9 bt-text-white bt-padding-large">
+          <p>Since 1967. Belmont has cherished the needs of the customers. We carry values and maintain culture throughout our journey. We believe tailoring is an Art. Measurement is an Art, execution and finishing is an Art.</p>
+        </div>
       </div>
     </header>
   </div>
@@ -205,9 +241,10 @@
     </div>
   </div>
   <!-- Automatic Slideshow Images -->
+  <div class="bt-content">
   <div class="mySlides1 bt-display-container bt-center bt-hide-small">
     <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-32">
+    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
       <h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>I came here for stitching 3 piece suit on velvet ,these guys are doing amazing job at affordable price, compare to other brands Belmont is far better option and their tailoring skill is next level.</p>
@@ -216,7 +253,7 @@
   </div>
   <div class="mySlides1 bt-display-container bt-center bt-hide-small">
     <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-32">
+    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
       <h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>Amazing ... I not worn a tailor made suit since forty years....my company QUEEN'S HOTEL got me couple of suits stitched ....Miracle....I thought I was born with that suit.. great work BELMONT....keep up your great job....</b></p>
@@ -225,7 +262,7 @@
   </div>
   <div class="mySlides1 bt-display-container bt-center bt-hide-small">
     <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-32">
+    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
       <h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>I've been their customer for 15+ years on and off. They never failed to meet the expectations. Recently went to purchase and tailor my wedding suit and the output was fully satisfactory. Their warmth approach and the fabrics they have will make you feel very satisfied especially when the ready made sizes are not fitting well for you. I'm totally satisfied with their service and highly recommend to anyone. &#128522;</p>
@@ -234,7 +271,7 @@
   </div>
   <div class="mySlides1 bt-display-container bt-center bt-hide-small">
     <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-32">
+    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
       <h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>Wow &#x1F929; I got my best wedding tuxedo suit from Belmont. I am so delighted and impressed in your fabric and fitting! Honestly my first impression with Belmont was not so great however they proved me wrong with their professionalism...more than me they really put lots of extra effort to make my wedding suit better, which I never expected. Later I realised I choose the best people for my wedding. My wife has told me how smart I look in my suit that I have got it from Belmont, as well as receiving many other compliments on the quality and fit from friends and family! I am so happy that I have found you...and I will continue with Belmount for all my best occasions! One of the best tailors especially for wedding suit.Thank you so much! &#128522;</p>
@@ -243,7 +280,7 @@
   </div>
   <div class="mySlides1 bt-display-container bt-center bt-hide-small">
     <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-32">
+    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
       <h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>When you think of a well perfected tailored Suit it's them. Had the most amazing experience. Suits are fitted perfectly and brings out the dapper you.
@@ -254,7 +291,7 @@
   </div>
   <div class="mySlides1 bt-display-container bt-center bt-hide-small">
     <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-32">
+    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
       <h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>The dress perfectly suits me. Never felt so happy wearing a dress because it fits you so genuinely and adds a value to your own self.
@@ -262,6 +299,7 @@
       <span class="subTitle">prince faraqualeeth </span>   
     </div>
   </div>
+</div>
   <!-- The Products Section -->
   <div class="bt-container bt-content bt-padding-32 bt-center" style="max-width:1000px" id="productsSec">
     <h2 class="bt-wide bt-center mainTit">PRODUCTS</h2>
@@ -340,7 +378,7 @@
         <img src="./img/fabrics6.jpg" class="fullWidth" alt="">
       </div>
     </div><br/>
-    <marquee behavior="scroll" direction="left" scrollamount="5"><img style="width:auto; height: 50px;" src="./img/arvind.png" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/raymond.png" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/linenclub.png" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/giza.png" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/reid.jpg" /></marquee>
+    <marquee behavior="scroll" direction="left" scrollamount="5"><img style="width:auto; height: 50px;" src="./img/dolce.png" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/linenclub.jpg" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/raymond.jpg" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/roger.jpg" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/soktas.jpg" /> &nbsp; <img style="width:auto; height: 50px;" src="./img/tessi.jpg" /></marquee>
   </div>
   <!-- The Contact Section -->
   <div class="bt-container bt-content bt-padding-32" id="contactSec" style="background-color: #f2f2f2;">
@@ -348,11 +386,11 @@
     <p class="subTit bt-center">We offer premium custom tailored suits for men who see the value in looking gallant.</p>
     <div class="bt-row">
       <div class="bt-col m6 bt-padding">
-        <form action="/action_page.php" target="_blank">
+        <form name="mail" id="mail" method="post">
           <input class="bt-input bt-border" type="text" placeholder="Your Name" required name="Name"><br>
           <input class="bt-input bt-border" type="text" placeholder="Your Email Address" required name="Email"><br>
           <textarea class="bt-input bt-border" style="resize: none;" placeholder="Your Message" required name="Message" rows="5"></textarea>
-          <button class="bt-button bt-black bt-section bt-right" type="submit">SEND</button>
+          <button class="bt-button bt-section bt-right bt-round bt-padding-large bt-large" style="color: #ffffff; background-color: #bf9668;" name="submit" type="submit">SEND</button>
         </form>
       </div>
       <div class="bt-col m6 bt-padding bt-medium">
