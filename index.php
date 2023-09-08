@@ -125,22 +125,45 @@ if(isset($_POST['submit']))
           <i class="fa fa-whatsapp"></i><span>WhatsApp<br><small>+91 98765 43210</small></span>
       </a>
   </div>
-  <!-- Automatic Slideshow Images -->
-  <div class="mySlides bt-display-container bt-center">
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+<!-- Full-width images with number and caption text -->
+<!-- Automatic Slideshow Images -->
+  <div class="mySlides fade bt-display-container bt-center">
+    <div class="numbertext">1 / 5</div>
     <img src="./img/home1.jpg" class="homeSlide">
   </div>
-  <div class="mySlides bt-display-container bt-center">
+  <div class="mySlides fade bt-display-container bt-center">
+    <div class="numbertext">2 / 5</div>
     <img src="./img/home2.jpg" class="homeSlide">
   </div>
-  <div class="mySlides bt-display-container bt-center">
+  <div class="mySlides fade bt-display-container bt-center">
+    <div class="numbertext">3 / 5</div>
     <img src="./img/home3.jpg" class="homeSlide">
   </div>
-  <div class="mySlides bt-display-container bt-center">
+  <div class="mySlides fade bt-display-container bt-center">
+    <div class="numbertext">4 / 5</div>
     <img src="./img/home21.jpg" class="homeSlide">
   </div>
-  <div class="mySlides bt-display-container bt-center">
+  <div class="mySlides fade bt-display-container bt-center">
+    <div class="numbertext">5 / 5</div>
     <img src="./img/home22.jpg" class="homeSlide">
   </div>
+
+<!-- Next and previous buttons -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- The dots/circles -->
+<div style="text-align:center; padding-top: 10px;">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>
+<span class="dot" onclick="currentSlide(5)"></span>
+</div>
   <div class="bt-container bt-content bt-padding-32">
     <div class="bt-row">
       <div class="bt-col m6 bt-padding-large bt-center">
@@ -194,7 +217,7 @@ if(isset($_POST['submit']))
       <h1 class="bt-text-white mainTit">WE DESIGN, YOU RULE</h1>
       <p class="bt-text-white spanTitle">−−− Providing you with maximum Level of comfort & confidence in every suit!</p>
     </div>
-    <a class="bt-display-right bt-button bt-round bt-large bt-opacity bt-hover-opacity-off" style="color: #ffffff; background-color: #bf9668; margin-right: 16px;" href="#contact">CONTACT US</a>
+    <a class="bt-display-right bt-button bt-round bt-large bt-hover-opacity-off" style="color: #ffffff; background-color: #bf9668; margin-right: 16px;" href="#contact">CONTACT US</a>
   </div>
   <div class="bt-content bt-container bt-padding-32">
     <div class="bt-row">
@@ -206,7 +229,7 @@ if(isset($_POST['submit']))
       <div class="bt-col m6 bt-padding-large">
         <h1 class="bt-text-black mainTit">BELMONT IN THE MEDIA</h1>
         <span class="subTitSpan">PRESS & ARTICLES</span>
-        <p>We invite you to follow us on our social media channels for the latest news and event updates! Be kept up to date with the freshest ideas of Peter Mason and his talented team. no matter where you are in the world.</p>
+        <p>We invite you to follow us on our social media channels for the latest news and event updates! Be kept up to date with the freshest ideas of Peter Mason and his talented team. No matter where you are in the world.</p>
         <p class="bt-left"><a href="https://www.youtube.com/@belmonttailors2451" class="bt-button bt-round bt-padding-large bt-large" style="color: #ffffff; background-color: #bf9668;">WATCH OUR VIDEOS</a></p>
       </div>
     </div>
@@ -252,7 +275,7 @@ if(isset($_POST['submit']))
       <div class="bt-twothird bt-container">
         <h2 class="mainTit">N.M JAINUL AUBIDEEN</h2>
         <span class="subTitle">−−− Founder</span>
-        <p>Our founder Mr N M JainuL Aubideen is a perfect tailor with integrity and self-confidence. He always focuses on perfection and time. He was driven by the policy " DO IT NOW ".</p>
+        <p>Our founder Mr. N. M. Jainul Aubideen is a perfect tailor with integrity and self-confidence. He always focuses on perfection and time. He was driven by the policy " DO IT NOW ".</p>
       </div>
 
       </div>
@@ -264,7 +287,7 @@ if(isset($_POST['submit']))
       <div class="bt-twothird bt-container">
         <h2 class="mainTit">ABDUL KAREEM SAKLA</h2>
         <span class="subTitle">−−− CEO</span>
-        <p>Mr Abdul Kareem Sada, the elder son, joined BELMONT after graduation. A person with an artistic view which insights best dressing sense. He is a Problem solver and a consultant in customized tailoring. He is a Rotarian and a sociaL worker.</p>
+        <p>Mr. Abdul Kareem Sakla, the elder son, joined BELMONT after graduation. A person with an artistic view which insights best dressing sense. He is a Problem solver and a consultant in customized tailoring. He is a Rotarian and a social worker.</p>
       </div>
 
       </div>
@@ -276,70 +299,88 @@ if(isset($_POST['submit']))
       <div class="bt-twothird bt-container">
         <h2 class="mainTit">MOHAMED HASAN</h2>
         <span class="subTitle">−−− Chairman</span>
-        <p>Mr Mohamed Hasan the younger son joined BELMONT after finishing civil engineering. He gives the finest attention to the procurement of fabrics and materials. He ensures that all garments are engineered with the specific need of the customers. He is a member of the Lions Club and Civil Engineers Association of India.</p>
+        <p>Mr. Mohamed Hasan the younger son joined BELMONT after finishing civil engineering. He gives the finest attention to the procurement of fabrics and materials. He ensures that all garments are engineered with the specific need of the customers. He is a member of the Lions Club and Civil Engineers Association of India.</p>
       </div>
 
     </div>
   </div>
   <!-- Automatic Slideshow Images -->
   <div class="bt-content">
-  <div class="mySlides1 bt-display-container bt-center bt-hide-small">
-    <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
-      <h2 class="mainTit">TESTIMONIALS</h2>
+    <!-- Slideshow container -->
+<div class="slideshow-container1">
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides1 fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="./img/about5.jpg" class="homeSlide1">
+    <div class="text bt-center bt-display-middle bt-container bt-text-white bt-padding-16"><h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>I came here for stitching 3 piece suit on velvet ,these guys are doing amazing job at affordable price, compare to other brands Belmont is far better option and their tailoring skill is next level.</p>
-      <span class="subTitle">Jaya Raju </span>
-    </div>
+      <span class="subTitle">Jaya Raju </span></div>
   </div>
-  <div class="mySlides1 bt-display-container bt-center bt-hide-small">
-    <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
-      <h2 class="mainTit">TESTIMONIALS</h2>
+
+  <div class="mySlides1 fade">
+    <div class="numbertext">2 / 6</div>
+    <img src="./img/about5.jpg" class="homeSlide1">
+    <div class="text bt-center bt-display-middle bt-container bt-text-white bt-padding-16"><h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>Amazing ... I not worn a tailor made suit since forty years....my company QUEEN'S HOTEL got me couple of suits stitched ....Miracle....I thought I was born with that suit.. great work BELMONT....keep up your great job....</b></p>
-      <span class="subTitle">J Ravi John </span>
-    </div>
+      <span class="subTitle">J Ravi John </span></div>
   </div>
-  <div class="mySlides1 bt-display-container bt-center bt-hide-small">
-    <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
-      <h2 class="mainTit">TESTIMONIALS</h2>
+
+  <div class="mySlides1 fade">
+    <div class="numbertext">3 / 6</div>
+    <img src="./img/about5.jpg" class="homeSlide1">
+    <div class="text bt-center bt-display-middle bt-container bt-text-white bt-padding-16"><h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>I've been their customer for 15+ years on and off. They never failed to meet the expectations. Recently went to purchase and tailor my wedding suit and the output was fully satisfactory. Their warmth approach and the fabrics they have will make you feel very satisfied especially when the ready made sizes are not fitting well for you. I'm totally satisfied with their service and highly recommend to anyone. &#128522;</p>
-      <span class="subTitle">Mohaan Balakrishnan</span>  
-    </div>
+      <span class="subTitle">Mohaan Balakrishnan</span> </div>
   </div>
-  <div class="mySlides1 bt-display-container bt-center bt-hide-small">
-    <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
-      <h2 class="mainTit">TESTIMONIALS</h2>
+
+<div class="mySlides1 fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="./img/about5.jpg" class="homeSlide1">
+  <div class="text bt-center bt-display-middle bt-container bt-text-white bt-padding-16"><h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>Wow &#x1F929; I got my best wedding tuxedo suit from Belmont. I am so delighted and impressed in your fabric and fitting! Honestly my first impression with Belmont was not so great however they proved me wrong with their professionalism...more than me they really put lots of extra effort to make my wedding suit better, which I never expected. Later I realised I choose the best people for my wedding. My wife has told me how smart I look in my suit that I have got it from Belmont, as well as receiving many other compliments on the quality and fit from friends and family! I am so happy that I have found you...and I will continue with Belmount for all my best occasions! One of the best tailors especially for wedding suit.Thank you so much! &#128522;</p>
-      <span class="subTitle">Albert Levay</span>
-    </div>
-  </div>
-  <div class="mySlides1 bt-display-container bt-center bt-hide-small">
-    <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
-      <h2 class="mainTit">TESTIMONIALS</h2>
+      <span class="subTitle">Albert Levay</span></div>
+</div>
+
+<div class="mySlides1 fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="./img/about5.jpg" class="homeSlide1">
+  <div class="text bt-center bt-display-middle bt-container bt-text-white bt-padding-16"><h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>When you think of a well perfected tailored Suit it's them. Had the most amazing experience. Suits are fitted perfectly and brings out the dapper you.
         Without a second thought this would be the go to place for any Custom fit cloths.
         Thank you Belmont. You guys are great !!!!!</p>
-      <span class="subTitle">Vicky Jeyakkan </span>   
-    </div>
-  </div>
-  <div class="mySlides1 bt-display-container bt-center bt-hide-small">
-    <img src="./img/about5.jpg" class="fullWidth">
-    <div class="bt-display-middle bt-container bt-text-white bt-padding-16">
-      <h2 class="mainTit">TESTIMONIALS</h2>
+      <span class="subTitle">Vicky Jeyakkan </span></div>
+</div>
+
+<div class="mySlides1 fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="./img/about5.jpg" class="homeSlide1">
+  <div class="text bt-center bt-display-middle bt-container bt-text-white bt-padding-16"><h2 class="mainTit">TESTIMONIALS</h2>
       <h2 class="subTitle">“</h2>
       <p>The dress perfectly suits me. Never felt so happy wearing a dress because it fits you so genuinely and adds a value to your own self.
         I recommend and give Belmont a 5 star and it is the maximum that is given here. Way to go Shakla</p>
-      <span class="subTitle">prince faraqualeeth </span>   
-    </div>
+      <span class="subTitle">prince faraqualeeth </span></div>
+</div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides1(1)">&#10095;</a>
   </div>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center; padding-top: 10px;">
+  <span class="dot1" onclick="currentSlide1(1)"></span>
+  <span class="dot1" onclick="currentSlide1(2)"></span>
+  <span class="dot1" onclick="currentSlide1(3)"></span>
+  <span class="dot1" onclick="currentSlide1(4)"></span>
+  <span class="dot1" onclick="currentSlide1(5)"></span>
+  <span class="dot1" onclick="currentSlide1(6)"></span>
+  </div>
+  
 </div>
   <!-- The Products Section -->
   <div class="bt-container bt-content bt-padding-32 bt-center" style="max-width:1000px" id="productsSec">
@@ -467,23 +508,7 @@ if(isset($_POST['submit']))
 </footer>
 
 <script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
-
-var myIndex1 = 0;
+/*var myIndex1 = 0;
 carousel1();
 
 function carousel1() {
@@ -496,7 +521,7 @@ function carousel1() {
   if (myIndex1 > y.length) {myIndex1 = 1}    
   y[myIndex1-1].style.display = "block";  
   setTimeout(carousel1, 4000);    
-}
+}*/
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
@@ -550,6 +575,81 @@ window.addEventListener('scroll', () => {
     }
   }
 });
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1; showSlides(slideIndex = 1);}    
+  x[myIndex-1].style.display = "block";  
+  showSlides(slideIndex += 1);
+  setTimeout(carousel, 5000);    
+}
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+let slideIndex1 = 1;
+showSlides1(slideIndex1);
+
+// Next/previous controls
+function plusSlides1(n) {
+  showSlides1(slideIndex1 += n);
+}
+
+// Thumbnail image controls
+function currentSlide1(n) {
+  showSlides1(slideIndex1 = n);
+}
+
+function showSlides1(n) {
+  let i;
+  let slides1 = document.getElementsByClassName("mySlides1");
+  let dots1 = document.getElementsByClassName("dot1");
+  if (n > slides1.length) {slideIndex1 = 1}
+  if (n < 1) {slideIndex1 = slides1.length}
+  for (i = 0; i < slides1.length; i++) {
+    slides1[i].style.display = "none";
+  }
+  for (i = 0; i < dots1.length; i++) {
+    dots1[i].className = dots1[i].className.replace(" active", "");
+  }
+  slides1[slideIndex1-1].style.display = "block";
+  dots1[slideIndex1-1].className += " active";
+}
 
 // When the user clicks anywhere outside of the modal, close it
 var modal = document.getElementById('ticketModal');
