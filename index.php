@@ -131,23 +131,19 @@ if(isset($_POST['submit']))
 <!-- Full-width images with number and caption text -->
 <!-- Automatic Slideshow Images -->
   <div class="mySlides fade bt-display-container bt-center">
-    <div class="numbertext">1 / 5</div>
+    <div class="numbertext">1 / 4</div>
     <img src="./img/home1.jpg" class="homeSlide">
   </div>
   <div class="mySlides fade bt-display-container bt-center">
-    <div class="numbertext">2 / 5</div>
-    <img src="./img/home2.jpg" class="homeSlide">
-  </div>
-  <div class="mySlides fade bt-display-container bt-center">
-    <div class="numbertext">3 / 5</div>
+    <div class="numbertext">2 / 4</div>
     <img src="./img/home3.jpg" class="homeSlide">
   </div>
   <div class="mySlides fade bt-display-container bt-center">
-    <div class="numbertext">4 / 5</div>
+    <div class="numbertext">3 / 4</div>
     <img src="./img/home21.jpg" class="homeSlide">
   </div>
   <div class="mySlides fade bt-display-container bt-center">
-    <div class="numbertext">5 / 5</div>
+    <div class="numbertext">4 / 4</div>
     <img src="./img/home22.jpg" class="homeSlide">
   </div>
 
@@ -162,7 +158,6 @@ if(isset($_POST['submit']))
 <span class="dot" onclick="currentSlide(2)"></span>
 <span class="dot" onclick="currentSlide(3)"></span>
 <span class="dot" onclick="currentSlide(4)"></span>
-<span class="dot" onclick="currentSlide(5)"></span>
 </div>
   <div class="bt-container bt-content bt-padding-32">
     <div class="bt-row">
@@ -174,7 +169,7 @@ if(isset($_POST['submit']))
         <h1 class="bt-text-black mainTit">DISCOVER TRUE QUALITY</h1>
         <span class="subTitSpan">HANDCRAFTED SUIT</span>
         <p>We provide you with great suits that befit you and your Lifestyle. Our suits are made from the highest quality fabrics and guaranteed to give you functionality, durability and comfort. Our skilled master tailors handle all of our cutting and sewing, ensuring precision in all production processes and paying attention to the details. Come to us and choose the best suit for your lifestyle.</p>
-        <p class="bt-left"><a href="#about" class="bt-button bt-round bt-padding-large bt-large" style="color: #ffffff; background-color: #bf9668;">LEARN ABOUT US</a></p>
+        <p class="bt-left"><a href="#aboutSec" class="bt-button bt-round bt-padding-large bt-large" style="color: #ffffff; background-color: #bf9668;">LEARN ABOUT US</a></p>
       </div>
     </div>
   </div>
@@ -217,7 +212,7 @@ if(isset($_POST['submit']))
       <h1 class="bt-text-white mainTit">WE DESIGN, YOU RULE</h1>
       <p class="bt-text-white spanTitle">−−− Providing you with maximum Level of comfort & confidence in every suit!</p>
     </div>
-    <a class="bt-display-right bt-button bt-round bt-large bt-hover-opacity-off" style="color: #ffffff; background-color: #bf9668; margin-right: 16px;" href="#contact">CONTACT US</a>
+    <a class="bt-display-right bt-button bt-round bt-large bt-hover-opacity-off" style="color: #ffffff; background-color: #bf9668; margin-right: 16px;" href="#contactSec">CONTACT US</a>
   </div>
   <div class="bt-content bt-container bt-padding-32">
     <div class="bt-row">
