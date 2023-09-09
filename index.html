@@ -8,89 +8,11 @@
 <link rel="stylesheet" href="./css/Lato.css">
 <link rel="stylesheet" href="./css/font-awesome.min.css">
 <link rel="stylesheet" href="./css/sweetalert.css">
+<script src="./js/jquery.min.js"></script>
 <script src="./js/sweetalert.js"></script>
 </a>
 </head>
 <body>
-<?php
-error_reporting(0);
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-if(isset($_POST['submit']))
-{
-  require 'vendor/autoload.php';
-
-  $mail = new PHPMailer(true);
-
-  try {
-    $mail->SMTPDebug = 0;								
-    $mail->isSMTP();										
-    $mail->Host	 = 'smtp.gmail.com;';				
-    $mail->SMTPAuth = true;							
-    $mail->Username = 'yazarvale@gmail.com';				
-    $mail->Password = 'kfclevphglfzhgmh';					
-    $mail->SMTPSecure = 'tls';							
-    $mail->Port	 = 587;
-
-    $mail->setFrom('yazarvale@gmail.com', 'BELMONT Website');	
-    $mail->addAddress('yazar.vr46@gmail.com', $_POST['Name']);
-    
-    $mail->isHTML(true);
-    $mail->Subject = 'Mail Received from BELMONT Website User';
-    $mail->Body = '<h1>This is '.$_POST['Name'].'</h1><p>'.$_POST['Message'].'</p>Reply to: '. $_POST['Email'];
-    $mail->AltBody = 'Body in plain text for non-HTML mail clients';
-    $mail->send();
-    echo "<script>Swal.fire({
-      title: 'Success!',
-      text: 'Mail has been sent successfully!',
-      icon: 'success',
-      confirmButtonText: 'OK'
-    });</script>";
-  } catch (Exception $e) {
-    echo "<script>Swal.fire({
-    title: 'Error!',
-    text: 'Message could not be sent!',
-    icon: 'error',
-    confirmButtonText: 'OK'
-  });</script>";
-    //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-  }
-  /*$to = "yazar.vr46@gmail.com";
-  $subject = "This is subject";
-
-  $message = "";
-  if(isset($_POST['Name']))
-    $message .= "<h1>This is ".$_POST['Name']."</h1>";
-  if(isset($_POST['Message']))
-    $message .= $_POST['Message']."<BR/>";
-  if(isset($_POST['Email']))
-    $message .= "Reply to: ". $_POST['Email'];
-
-  $header = "From:yazarvale@gmail.com \r\n";
-  $header .= "MIME-Version: 1.0\r\n";
-  $header .= "Content-type: text/html\r\n";
-
-  $retval = mail ($to,$subject,$message,$header);
-
-  if( $retval == true ) {
-    echo "<script>Swal.fire({
-      title: 'Success!',
-      text: 'Mail sent successfully...!',
-      icon: 'success',
-      confirmButtonText: 'OK'
-    });</script>";
-  } else {
-  echo "<script>Swal.fire({
-    title: 'Error!',
-    text: 'Message could not be sent...!',
-    icon: 'error',
-    confirmButtonText: 'OK'
-  });</script>";
-  }*/
-}
-?>
 <!-- Navbar -->
 <div class="bt-top">
   <div id="navMenu" class="bt-bar bt-white bt-bar-container">
@@ -207,14 +129,16 @@ if(isset($_POST['submit']))
   </div>
   
   <div class="bt-content bt-display-container bt-wide ">
-    <img class="bt-image" src="./img/home9.jpg" alt="" style="width:100%; height:260px;">
-    <div class="bt-display-left bt-text-white bt-col m8 bt-padding">
+    <img class="bt-img-button" src="./img/home9.jpg" alt="">
+    <div class="bt-display-left bt-text-white bt-twothird bt-padding">
       <h1 class="bt-text-white mainTit">WE DESIGN, YOU RULE</h1>
       <p class="bt-text-white spanTitle">−−− Providing you with maximum Level of comfort & confidence in every suit!</p>
     </div>
-    <a class="bt-display-right bt-button bt-round bt-large bt-hover-opacity-off" style="color: #ffffff; background-color: #bf9668; margin-right: 16px;" href="#contactSec">CONTACT US</a>
+    <div class="bt-button-right bt-third">
+      <a class="bt-button bt-round bt-large bt-hover-opacity-off" style="color: #ffffff; background-color: #bf9668; margin-right: 16px;" href="#contactSec">CONTACT US</a>
+    </div>
   </div>
-  <div class="bt-content bt-container bt-padding-32">
+  <div class="bt-content bt-container bt-padding-16">
     <div class="bt-row">
       <div class="bt-col m6 bt-padding-large bt-video-link">
         <img src="./img/home10.jpg" class="bt-round bt-image bt-opacity-off" alt="" width="500" height="282">
@@ -230,7 +154,7 @@ if(isset($_POST['submit']))
     </div>
   </div>
   <!-- Container (Portfolio Section) -->
-<div class="bt-content bt-container bt-padding-32" id="">
+<div class="bt-content bt-container bt-padding-16" id="">
   <h3 class="bt-center mainTit">LOOK BOOK</h3><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
@@ -427,6 +351,7 @@ if(isset($_POST['submit']))
   </div>
   <div class="bt-content bt-container bt-padding-32 bt-center" id="">
     <img src="./img/products1.jpg" class="fullWidth" alt="">
+    <BR/><BR/>
     <h2 class="bt-wide bt-center mainTit">FABRICS</h2>
     <p class="subTit">QUALITY FABRIC IS IN OUR DNA. WE SOURCE FABRICS FROM SOME OF THE BEST MILLS ACROSS WORLD OUR CRAFTSMANSHIP MAKE FABRICS THAT LAST YOU A LIFETIME.</p><br>
     <div class="bt-row-padding bt-center">
@@ -464,9 +389,9 @@ if(isset($_POST['submit']))
     <div class="bt-row">
       <div class="bt-col m6 bt-padding">
         <form name="mail" id="mail" method="post">
-          <input class="bt-input bt-border" type="text" placeholder="Your Name" required name="Name"><br>
-          <input class="bt-input bt-border" type="text" placeholder="Your Email Address" required name="Email"><br>
-          <textarea class="bt-input bt-border" style="resize: none;" placeholder="Your Message" required name="Message" rows="5"></textarea>
+          <input class="bt-input bt-border" type="text" placeholder="Your Name" required id="name" name="Name"><br>
+          <input class="bt-input bt-border" type="text" placeholder="Your Email Address" required id="email" name="Email"><br>
+          <textarea class="bt-input bt-border" style="resize: none;" placeholder="Your Message" required id="msg" name="Message" rows="5"></textarea>
           <button class="bt-button bt-section bt-right bt-round bt-padding-large bt-large" style="color: #ffffff; background-color: #bf9668;" name="submit" type="submit">SEND</button>
         </form>
       </div>
@@ -496,7 +421,7 @@ if(isset($_POST['submit']))
   
 <!-- End Page Content -->
 </div>
-
+<div id="ack"></div>
 <!-- Footer -->
 <footer class="bt-container bt-padding bt-center bt-opacity bt-light-grey bt-xlarge">
   <p class="bt-medium">Belmont Tailors @ 2023 All Rights Reserved.</p>
@@ -540,7 +465,7 @@ function menuClrFunc(ele) {
 
 window.addEventListener('scroll', () => {
   let y = Math.round(1 + (window.scrollY || window.pageYOffset) / 150);
-  console.log(y);
+  //console.log(y);
   if (document.querySelector('.bt_btn_active'))
     document.querySelector('.bt_btn_active').classList.replace('bt_btn_active', 'bt_btn_default');
   if(y==1) {
@@ -653,6 +578,28 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+$(document).ready(function () {
+  $("#mail").submit(function (event) {
+  var formData = {
+      name: $("#name").val(),
+      email: $("#email").val(),
+      msg: $("#msg").val(),
+    };
+    
+    $.ajax({
+      type: "POST",
+      url: "sendmail.php",
+      data: formData,
+      dataType: "json",
+      encode: true,
+    }).done(function (data) {
+      $("#ack").html(data.message);
+    });
+
+    event.preventDefault();
+  });
+});
 </script>
 </body>
 </html>
