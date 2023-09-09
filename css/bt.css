@@ -687,12 +687,20 @@
          object-fit: cover;
      }
 
-     .bt-button-right {
+    .bt-display-left {
         position: absolute;
         top: 50%;
-        right: 0%;
+        left: 0%;
         transform: translate(0%, -50%);
-        -ms-transform: translate(0%, -50%)
+        -ms-transform: translate(-0%, -50%)
+    }
+
+     .bt-button-right {
+        position: absolute;
+        bottom: 10%;
+        right: 28%;
+        transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
     }
 
     .bt-img-button {
@@ -758,7 +766,7 @@
      .bt-button-right {
         position: absolute;
         top: 50%;
-        right: 0%;
+        right: 7%;
         transform: translate(0%, -50%);
         -ms-transform: translate(0%, -50%)
     }
@@ -891,7 +899,7 @@
 
      .bt-img-button {
          width:100%;
-         height:300px;
+         height:50vh;
      }
  }
 
