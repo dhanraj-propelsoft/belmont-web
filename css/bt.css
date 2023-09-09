@@ -1705,3 +1705,26 @@
   .active, .dot1:hover {
     background-color: #717171;
   }
+
+/*.loader_fade
+{
+    background: rgba( 255, 255, 255, 0.8 );
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    text-align: center;
+}
+
+.loader_fade img
+{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity: inherit;
+    filter: inherit;
+    position: fixed;
+    width:150px;
+    height:150px;
+}*/

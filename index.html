@@ -420,6 +420,10 @@
 <!-- End Page Content -->
 </div>
 <div id="ack"></div>
+
+<div id="load_fade" class="load_fade" style="background: rgba( 255, 255, 255, 0.8 );display: none;height: 100%;position: fixed;width: 100%;z-index: 9999;text-align: center;">
+  <img src='./img/loader-new.gif' style="left: 50%;  top: 50%;  transform: translate(-50%, -50%);  -ms-transform: translate(-50%, -50%);  opacity: inherit;  filter: inherit;  position: fixed;  width:150px;  height:150px;" />
+</div>
 <!-- Footer -->
 <footer class="bt-container bt-padding bt-center bt-opacity bt-light-grey bt-xlarge">
   <p class="bt-medium">Belmont Tailors @ 2023 All Rights Reserved.</p>
@@ -579,7 +583,8 @@ window.onclick = function(event) {
 
 $(document).ready(function () {
   $("#mail").submit(function (event) {
-  var formData = {
+    $('#load_fade').fadeTo('slow', 0.7);
+    var formData = {
       name: $("#name").val(),
       email: $("#email").val(),
       msg: $("#msg").val(),
@@ -592,6 +597,8 @@ $(document).ready(function () {
       dataType: "json",
       encode: true,
     }).done(function (data) {
+      $("form").trigger("reset");
+      $("#load_fade").hide();
       $("#ack").html(data.message);
     });
 
