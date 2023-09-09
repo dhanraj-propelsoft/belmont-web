@@ -390,7 +390,7 @@
           <input class="bt-input bt-border" type="text" placeholder="Your Name" required id="name" name="Name"><br>
           <input class="bt-input bt-border" type="text" placeholder="Your Email Address" required id="email" name="Email"><br>
           <textarea class="bt-input bt-border" style="resize: none;" placeholder="Your Message" required id="msg" name="Message" rows="5"></textarea>
-          <button class="bt-button bt-section bt-right bt-round bt-padding-large bt-large" style="color: #ffffff; background-color: #bf9668;" name="submit" type="submit">SEND</button>
+          <button class="bt-button bt-section bt-right bt-round bt-padding-large bt-large" style="color: #ffffff; background-color: #bf9668;" id="submit" name="submit" type="submit">SEND</button>
         </form>
       </div>
       <div class="bt-col m6 bt-padding bt-medium">
@@ -584,6 +584,7 @@ window.onclick = function(event) {
 $(document).ready(function () {
   $("#mail").submit(function (event) {
     $('#load_fade').fadeTo('slow', 0.7);
+    $('#submit').prop('disabled', true);
     var formData = {
       name: $("#name").val(),
       email: $("#email").val(),
@@ -598,6 +599,7 @@ $(document).ready(function () {
       encode: true,
     }).done(function (data) {
       $("form").trigger("reset");
+      $('#submit').prop('disabled', false);
       $("#load_fade").hide();
       $("#ack").html(data.message);
     });

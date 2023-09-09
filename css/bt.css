@@ -1709,6 +1709,7 @@
 /*.loader_fade
 {
     background: rgba( 255, 255, 255, 0.8 );
+    display: none;
     height: 100%;
     position: fixed;
     width: 100%;
@@ -1725,6 +1726,6 @@
     opacity: inherit;
     filter: inherit;
     position: fixed;
-    width:150px;
-    height:150px;
+    width: 150px;
+    height: 150px;
 }*/
