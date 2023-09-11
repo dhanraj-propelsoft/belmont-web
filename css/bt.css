@@ -1666,8 +1666,8 @@
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -1676,7 +1676,7 @@
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #bf8d51;
 }
 
 /* Fading animation */
@@ -1689,6 +1689,68 @@
   from {opacity: .4}
   to {opacity: 1}
 }
+
+.animated {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes slideInLeft { 
+      0% {opacity: 0;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+      100%{-webkit-transform:translateX(0);
+           transform:translateX(0);
+      }
+  }
+  @keyframes slideInLeft { 
+     0% {
+        opacity: 0;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+     }
+     100%{
+          -webkit-transform:translateX(0);
+          -ms-transform:translateX(0);
+          transform:translateX(0);
+     }
+  }
+  .slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+  }
+  
+  @-webkit-keyframes slideInRight { 
+    0% {
+    opacity: 0;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    }
+    100%{
+      -webkit-transform:translateX(0);
+      transform:translateX(0);
+    }
+  }
+  @keyframes slideInRight { 
+    0% {
+    opacity: 0;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+    }
+    100%{-webkit-transform:translateX(0);
+         -ms-transform:translateX(0);
+         transform:translateX(0);
+     }
+  }
+  .slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+  }
   
   /* Hide the images by default */
   .mySlides1 {
@@ -1736,8 +1798,8 @@
   /* The dots/bullets/indicators */
   .dot1 {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
@@ -1746,7 +1808,7 @@
   }
   
   .active, .dot1:hover {
-    background-color: #717171;
+    background-color: #bf8d51;
   }
 
 /*.loader_fade
