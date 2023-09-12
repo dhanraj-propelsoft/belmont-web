@@ -153,7 +153,7 @@
  .bt-image {
      max-width: 100%;
      height: auto;
-     float: right;
+     /* float: right; */
  }
 
  img {
@@ -569,6 +569,28 @@
      .bt-bar-container {
          padding: 0 20vw 0 20vw;
      }
+
+     .bt-sm-block {
+         padding: 25px;
+         float: right;
+         /* display: inline-block; */
+     }
+
+     .bt-logo {
+        width:220px;
+        height:55px;
+     }
+
+     .bt-black-bg {
+         width:100%;
+         height:300px;
+         background-color: #000000;
+     }
+
+     .bt-image-blk {
+         width:auto;
+         height:300px;
+     }
  }
 
  @media (max-width:600px) {
@@ -622,13 +644,13 @@
 
      .homeSlide {
          width: 100%;
-         height: 77vh;
+         height: 75vh;
          object-fit: cover;
      }
 
      .homeSlide1 {
          width: 100%;
-         height: 80vh;
+         height: 85vh;
          object-fit: cover;
      }
 
@@ -653,11 +675,11 @@
     }
 
     .bt-display-text {
-        position: absolute;
+        /* position: absolute;
         top: 50%;
         left: 0%;
         transform: translate(0%, -50%);
-        -ms-transform: translate(-0%, -50%)
+        -ms-transform: translate(-0%, -50%) */
     }
 
      .bt-button-right {
@@ -666,6 +688,28 @@
         right: 28%;
         transform: translate(0%, 0%);
         -ms-transform: translate(0%, 0%);
+    }
+
+    .bt-sm-block {
+        padding: 15px;
+        text-align: right;  
+        /* display: inline-block; */
+    }
+
+    .bt-logo {
+       width:180px;
+       height:45px;
+    }
+
+    .bt-black-bg {
+        width:100%;
+        height:300px;
+        background-color: #000000;
+    }
+
+    .bt-image-blk {
+        width:100%;
+        height:auto;
     }
  }
 
@@ -729,6 +773,28 @@
         height: 400px;
         object-fit: cover;
     }
+
+    .bt-sm-block {
+        padding: 15px;
+        float: right;
+        /* display: inline-block; */
+    }
+
+    .bt-logo {
+       width:200px;
+       height:50px;
+    }
+
+    .bt-black-bg {
+        width:100%;
+        height:300px;
+        background-color: #000000;
+    }
+
+    .bt-image-blk {
+        width:auto;
+        height:300px;
+    }
  }
 
  @media (min-width:993px) {
@@ -767,7 +833,7 @@
     }
 
      .homeSlide {
-         width: 100%;
+         width: 80vw;
          height: 77vh;
          object-fit: cover;
      }
@@ -821,6 +887,29 @@
         right: 0%;
         transform: translate(0%, -50%);
         -ms-transform: translate(0%, -50%)
+    }
+
+    .bt-sm-block {
+        padding: 20px;
+        float: right;
+        /* display: inline-block; */
+    }
+
+    .bt-logo {
+       width:220px;
+       height:55px;
+       margin-right: 75px;
+    }
+
+    .bt-black-bg {
+        width:100%;
+        height:300px;
+        background-color: #000000;
+    }
+
+    .bt-image-blk {
+        width:auto;
+        height:300px;
     }
  }
 
@@ -886,12 +975,42 @@
          -ms-transform: translate(-0%, -50%)
      }
 
+    .bt-display-right {
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%)
+    }
+
      .bt-button-right {
         position: absolute;
         top: 50%;
         right: 5%;
         transform: translate(0%, -50%);
         -ms-transform: translate(0%, -50%)
+    }
+
+    .bt-sm-block {
+        padding: 20px;
+        float: right;
+        /* display: inline-block; */
+    }
+
+    .bt-logo {
+       width:200px;
+       height:50px;
+    }
+
+    .bt-black-bg {
+        width:100%;
+        height:300px;
+        background-color: #000000;
+    }
+
+    .bt-image-blk {
+        width:auto;
+        height:300px;
     }
  }
 
@@ -944,6 +1063,28 @@
          height:300px;
          object-fit: cover;
      }
+
+    .bt-sm-block {
+        padding: 15px;
+        float: right;
+        /* display: inline-block; */
+    }
+
+    .bt-logo {
+       width:200px;
+       height:50px;
+    }
+
+    .bt-black-bg {
+        width:100%;
+        height:300px;
+        background-color: #000000;
+    }
+
+    .bt-image-blk {
+        width:auto;
+        height:300px;
+    }
  }
 
  .bt-top, .bt-bottom {
@@ -1531,11 +1672,6 @@
 
  .w3-button>a:active {
      color: red !important;
- }
-
- .bt-sm-block {
-     padding: 10px;
-     text-align: right;
  }
 
  .bt-video-link {

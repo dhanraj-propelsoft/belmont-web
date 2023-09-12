@@ -18,11 +18,11 @@
 <div class="bt-top">
   <div id="navMenu" class="bt-bar bt-white bt-bar-container">
     <a class="bt-bar-item bt-button bt-padding-large bt-hide-medium bt-hide-large bt-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="bt-bar-item bt-padding-small"><img src="./img/logo.png" style="width:162px; height:38px;"/></a>
-    <a id="home" href="#" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_active" onclick="menuClrFunc(this.id)">HOME</a>
-    <a id="about" href="#aboutSec" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">ABOUT US</a>
-    <a id="products" href="#productsSec" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">PRODUCTS</a>
-    <a id="contact" href="#contactSec" class="bt-bar-item bt-button bt-padding-large bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">CONTACT US</a>
+    <a href="#" class="bt-bar-item bt-padding-small"><img src="./img/logo.png" class="bt-logo"/></a>
+    <a id="home" href="#" class="bt-bar-item bt-button bt-padding-24 bt-hide-small subTit bt_btn_active" onclick="menuClrFunc(this.id)">HOME</a>
+    <a id="about" href="#aboutSec" class="bt-bar-item bt-button bt-padding-24 bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">ABOUT US</a>
+    <a id="products" href="#productsSec" class="bt-bar-item bt-button bt-padding-24 bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">PRODUCTS</a>
+    <a id="contact" href="#contactSec" class="bt-bar-item bt-button bt-padding-24 bt-hide-small subTit bt_btn_default" onclick="menuClrFunc(this.id)">CONTACT US</a>
     <div class="bt-sm-block">
       <a href="https://www.facebook.com/belmonttailors/" target="_blank"><i class="icon fa fa-facebook white-icon bt-padding-small"></i></a>
       <a href="https://www.instagram.com/belmonttailors/" target="_blank"><i class="icon fa fa-instagram white-icon bt-padding-small"></i></a>
@@ -41,18 +41,19 @@
 </div>
 
 <!-- Page content -->
-<div class="bt-content" style="max-width:2000px;margin-top:46px" id="homeSec">
+<div class="bt-content" style="max-width:2000px;margin-top:60px" id="homeSec">
   <div class="whats-float">
       <a href="https://api.whatsapp.com/send?phone=9043022049&text=Hi"
          target="_blank">
           <i class="fa fa-whatsapp"></i><span>WhatsApp<br><small>+91 90430 22049</small></span>
       </a>
   </div>
+  <div class="bt-center">
+    <img src="./img/home1.jpg" class="homeSlide">
+  </div>  
   <!-- Slideshow container -->
-<div class="slideshow-container">
+<!-- <div class="slideshow-container">
 
-<!-- Full-width images with number and caption text -->
-<!-- Automatic Slideshow Images -->
   <div class="mySlides animated slideInRight bt-display-container bt-center">
     <div class="numbertext">1 / 4</div>
     <img src="./img/home1.jpg" class="homeSlide">
@@ -70,18 +71,16 @@
     <img src="./img/home22.jpg" class="homeSlide">
   </div>
 
-<!-- Next and previous buttons -->
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
-<!-- The dots/circles -->
 <div style="text-align:center; padding-top: 10px;">
 <span class="dot" onclick="currentSlide(1)"></span>
 <span class="dot" onclick="currentSlide(2)"></span>
 <span class="dot" onclick="currentSlide(3)"></span>
 <span class="dot" onclick="currentSlide(4)"></span>
-</div>
+</div> -->
   <div class="bt-container bt-content bt-padding-32">
     <div class="bt-row">
       <div class="bt-col m6 bt-padding-large bt-center">
@@ -129,14 +128,14 @@
     </div>
   </div>
   
-  <div class="bt-content bt-display-container bt-wide ">
+  <!-- <div class="bt-content bt-display-container bt-wide ">
     <img class="bt-img-button" src="./img/home9.jpg" alt="">
     <div class="bt-display-left bt-text-white bt-twothird bt-padding-large">
       <h1 class="bt-text-white mainTit">WE DESIGN, YOU RULE</h1>
       <p class="bt-text-white spanTitle">−−− Providing you with maximum Level of comfort & confidence in every suit!</p>
     </div>
     <a class="bt-button bt-button-right bt-round bt-large bt-hover-opacity-off" style="color: #ffffff; background-color: #bf9668;" href="#contactSec">CONTACT US</a>
-  </div>
+  </div> -->
   <div class="bt-content bt-container bt-padding-16">
     <div class="bt-row">
       <div class="bt-col m6 bt-padding-large bt-video-link">
@@ -173,15 +172,18 @@
 </div>
   <!-- The About Us Section -->
   <div class="bt-container bt-content bt-center bt-padding-32" id="aboutSec">
+    <BR/>
     <h2 class="bt-wide mainTit">ABOUT US</h2>
-    <header class="bt-display-container bt-wide bt-padding-32">
-      <div style="width:100%; height:250px; background-color: black;">
-        <img class="bt-display-right bt-image" src="./img/about1.jpg" alt="" style="width:auto; height:250px;">
-        <div class="bt-display-text bt-col m9 bt-text-white bt-padding-large">
+    <div class="bt-display-container bt-wide bt-padding-32">
+      <div class="row bt-black-bg">
+        <div class="bt-display-text bt-col l9 m9 s12 bt-text-white bt-padding-large">
           <p>Since 1967. Belmont has cherished the needs of the customers. We carry values and maintain culture throughout our journey. We believe tailoring is an Art. Measurement is an Art, execution and finishing is an Art.</p>
         </div>
+        <div class="bt-col l3 m3 s12">
+          <img class="bt-display-right bt-image-blk" src="./img/about1.jpg" alt="" style="">
+        </div>
       </div>
-    </header>
+    </div>
   </div>
   <div class="bt-content">
 
@@ -302,6 +304,7 @@
 </div>
   <!-- The Products Section -->
   <div class="bt-container bt-content bt-padding-32 bt-center" style="max-width:1000px" id="productsSec">
+    <BR/>
     <h2 class="bt-wide bt-center mainTit">PRODUCTS</h2>
     <p class="subTit">NOTHING CAN GO WRONG WHEN EVERY ASPECT IS PERSONALISED FOR YOUR UNIQUE PERSONALITY AND THAT WHICH WOULD FIT YOU RIGHT</p>
     <div class="bt-row-padding bt-center">
@@ -344,7 +347,7 @@
 
       <div class="bt-col m6">
         <img src="./img/trouzers.jpg" style="width:auto; height: 200px;" class="" alt=""><br/>
-        <span class="prodSpan">TROUSERS</span>
+        <span class="prodSpan">ACCESSORIES</span>
       </div>
     </div>
   </div>
@@ -479,22 +482,22 @@ window.addEventListener('scroll', () => {
   } else {
     document.getElementById('navMenu').classList.add('bt-card');
   }
-  if ((y>=1) && (y<17)) {
+  if ((y>=1) && (y<16)) {
     var x = document.getElementById("home");
     if (x.className.indexOf("bt_btn_active") == -1) {
       x.className = x.className.replace('bt_btn_default', 'bt_btn_active');
     }
-  } else if((y>=17) && (y<30)) {
+  } else if((y>=16) && (y<26)) {
     var x = document.getElementById("about");
     if (x.className.indexOf("bt_btn_active") == -1) {
       x.className = x.className.replace('bt_btn_default', 'bt_btn_active');
     }
-  } else if((y>=30) && (y<43)) {
+  } else if((y>=26) && (y<39)) {
     var x = document.getElementById("products");
     if (x.className.indexOf("bt_btn_active") == -1) {
       x.className = x.className.replace('bt_btn_default', 'bt_btn_active');
     }
-  } else if(y>=43) {
+  } else if(y>=39) {
     var x = document.getElementById("contact");
     if (x.className.indexOf("bt_btn_active") == -1) {
       x.className = x.className.replace('bt_btn_default', 'bt_btn_active');
@@ -502,7 +505,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-let slideIndex = 0;
+/*let slideIndex = 0;
 //showSlides(slideIndex);
 
 // Automatic Slideshow - change image every 4 seconds
@@ -562,7 +565,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-}
+}*/
 
 let slideIndex1 = 1;
 showSlides1(slideIndex1);
