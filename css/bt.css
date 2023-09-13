@@ -60,6 +60,7 @@
  }
 
  button, [type=button], [type=reset], [type=submit] {
+     appearance: button;
      -webkit-appearance: button
  }
 
@@ -674,13 +675,13 @@
         -ms-transform: translate(-0%, -50%)
     }
 
-    .bt-display-text {
-        /* position: absolute;
+    /* .bt-display-text {
+        position: absolute;
         top: 50%;
         left: 0%;
         transform: translate(0%, -50%);
-        -ms-transform: translate(-0%, -50%) */
-    }
+        -ms-transform: translate(-0%, -50%)
+    } */
 
      .bt-button-right {
         position: absolute;
