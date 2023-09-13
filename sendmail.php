@@ -1,54 +1,6 @@
 <?php
 error_reporting(0);
 
-/*use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'vendor/autoload.php';
-
-$mail = new PHPMailer(true);
-
-$data = [];
-
-try {
-    $mail->SMTPDebug = 0;								
-    $mail->isSMTP();										
-    $mail->Host	 = 'smtp.gmail.com;';				
-    $mail->SMTPAuth = true;							
-    $mail->Username = 'yazarvale@gmail.com';				
-    $mail->Password = 'kfclevphglfzhgmh';					
-    $mail->SMTPSecure = 'tls';							
-    $mail->Port	 = 587;
-
-    $mail->setFrom('yazarvale@gmail.com', 'BELMONT Website');	
-    $mail->addAddress('yazar.vr46@gmail.com', $_POST['name']);
-
-    $mail->isHTML(true);
-    $mail->Subject = 'Mail Received from BELMONT Website User';
-    $mail->Body = '<h1>This is '.$_POST['name'].'</h1><p>'.$_POST['msg'].'</p>Reply to: '. $_POST['email'];
-    $mail->AltBody = 'Body in plain text for non-HTML mail clients';
-    $mail->send();
-    
-    $data['success'] = true;
-    $data['message'] = "<script>Swal.fire({
-        title: 'Success!',
-        text: 'Mail has been sent successfully!',
-        icon: 'success',
-        confirmButtonText: 'OK'
-        });</script>";
-} catch (Exception $e) {
-    $data['success'] = false;
-    $data['message'] = "<script>Swal.fire({
-        title: 'Error!',
-        text: 'Message could not be sent!',
-        icon: 'error',
-        confirmButtonText: 'OK'
-        });</script>";
-    //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
-
-echo json_encode($data);*/
-
 $data = [];
 $to = "yazar.vr46@gmail.com";
 $subject = "Mail Received from BELMONT Website User";
