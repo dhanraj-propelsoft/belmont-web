@@ -573,8 +573,7 @@
 
      .bt-sm-block {
          padding: 25px;
-         /* float: right; */
-         text-align: right;
+         float: right;
          /* display: inline-block; */
      }
 
@@ -642,6 +641,22 @@
         max-width: 100%;
         position: relative;
         margin: auto;
+        overflow: hidden;
+        height: 85vh;
+    }
+  
+    /* Hide the images by default */
+    .mySlides1 {
+      display: none;
+      height: 85vh;
+    }
+
+    .bt-display-middle {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%)
     }
 
      .homeSlide {
@@ -694,8 +709,7 @@
 
     .bt-sm-block {
         padding: 15px;
-        /* float: right; */
-        text-align: right;
+        text-align: right;  
         /* display: inline-block; */
     }
 
@@ -741,6 +755,22 @@
          max-width: 100%;
          position: relative;
          margin: auto;
+         overflow: hidden;
+         height: 80vh;
+     }
+  
+     /* Hide the images by default */
+     .mySlides1 {
+       display: none;
+       height: 80vh;
+     }
+
+     .bt-display-middle {
+         position: absolute;
+         top: 50%;
+         left: 28%;
+         transform: translate(-20%, -50%);
+         -ms-transform: translate(-20%, -50%)
      }
 
      .homeSlide {
@@ -779,8 +809,7 @@
 
     .bt-sm-block {
         padding: 15px;
-        /* float: right; */
-        text-align: right;
+        float: right;
         /* display: inline-block; */
     }
 
@@ -834,6 +863,22 @@
         max-width: 75vw;
         position: relative;
         margin: auto;
+        overflow: hidden;
+        height: 400px;
+    }
+  
+    /* Hide the images by default */
+    .mySlides1 {
+      display: none;
+      height: 400px;
+    }
+
+    .bt-display-middle {
+        position: absolute;
+        top: 50%;
+        left: 28%;
+        transform: translate(-20%, -50%);
+        -ms-transform: translate(-20%, -50%)
     }
 
      .homeSlide {
@@ -895,8 +940,7 @@
 
     .bt-sm-block {
         padding: 20px;
-        /* float: right; */
-        text-align: right;
+        float: right;
         /* display: inline-block; */
     }
 
@@ -950,6 +994,22 @@
         max-width: 100vw;
         position: relative;
         margin: auto;
+        overflow: hidden;
+        height: 500px;
+    }
+  
+    /* Hide the images by default */
+    .mySlides1 {
+      display: none;
+      height: 500px;
+    }
+
+    .bt-display-middle {
+        position: absolute;
+        top: 50%;
+        left: 28%;
+        transform: translate(-20%, -50%);
+        -ms-transform: translate(-20%, -50%)
     }
 
      .homeSlide {
@@ -998,8 +1058,7 @@
 
     .bt-sm-block {
         padding: 20px;
-        /* float: right; */
-        text-align: right;
+        float: right;
         /* display: inline-block; */
     }
 
@@ -1051,6 +1110,22 @@
         max-width: 100%;
         position: relative;
         margin: auto;
+        overflow: hidden;
+        height: 500px;
+    }
+  
+    /* Hide the images by default */
+    .mySlides1 {
+      display: none;
+      height: 500px;
+    }
+
+    .bt-display-middle {
+        position: absolute;
+        top: 50%;
+        left: 28%;
+        transform: translate(-20%, -50%);
+        -ms-transform: translate(-20%, -50%)
     }
 
      .homeSlide {
@@ -1073,8 +1148,7 @@
 
     .bt-sm-block {
         padding: 15px;
-        /* float: right; */
-        text-align: right;
+        float: right;
         /* display: inline-block; */
     }
 
@@ -1145,14 +1219,6 @@
      position: absolute;
      right: 0;
      bottom: 0
- }
-
- .bt-display-middle {
-     position: absolute;
-     top: 50%;
-     left: 28%;
-     transform: translate(-20%, -50%);
-     -ms-transform: translate(-20%, -50%)
  }
 
  .bt-display-topmiddle {
@@ -1899,10 +1965,36 @@
     -webkit-animation-name: slideInRight;
     animation-name: slideInRight;
   }
+
+  /***** Global Slide *****/
+.slide-right, .slide-left {
+    width: 100%;
+  }
   
-  /* Hide the images by default */
-  .mySlides1 {
-    display: none;
+  /***** Slide Right *****/
+  .slide-right {
+    animation: 3s slide-right;
+  }
+  @keyframes slide-right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+  
+  /***** Slide Left *****/
+  .slide-left {
+    animation: 3s slide-left;
+  }
+  @keyframes slide-left {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
+    }
   }
   
   /* Next & previous buttons */
