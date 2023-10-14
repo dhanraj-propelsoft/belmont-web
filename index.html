@@ -14,6 +14,14 @@
 </a>
 </head>
 <body>
+  <div class="splashScreen">
+    <div class="home">
+        <video muted autoplay>
+            <source src="splash.mp4" type="video/mp4">
+        </video>
+    </div>
+  </div>
+  <div class="splashBehind">
 <!-- Navbar -->
 <div class="bt-top">
   <div id="navMenu" class="bt-bar bt-white bt-bar-container">
@@ -442,8 +450,12 @@
     <div class="bt-col m6"><p class="bt-medium bt-center">Designed & Powered by <a href="http://www.propelsoft.in/" target="_blank" style="color: #8000FF; text-decoration: none;">Propelsoft</a></p></div>
   </div>
 </footer>
-
+  </div>
 <script>
+  $('.splashScreen').delay(10500).animate({top: '-100%'}, 1500);
+  $('body').delay(11000).queue(function(){
+      $('body').addClass("visibleSplash");
+  });
 /*var myIndex1 = 0;
 carousel1();
 

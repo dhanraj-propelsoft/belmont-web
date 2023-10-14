@@ -13,6 +13,7 @@
  }
 
  body {
+	overflow: hidden;
      margin: 0
  }
 
@@ -2076,3 +2077,25 @@
     width: 150px;
     height: 150px;
 }*/
+.home {
+    height: 100vh;
+    position: relative;
+}
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body.visibleSplash {
+	overflow: visible !important;
+}
+.splashScreen {
+	width: 100%;
+ 	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+    z-index: 999;
+}
