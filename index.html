@@ -11,16 +11,8 @@
 <link rel="stylesheet" href="./css/sweetalert.css">
 <script src="./js/jquery.min.js"></script>
 <script src="./js/sweetalert.js"></script>
-</a>
 </head>
 <body>
-  <div class="splashScreen">
-    <div class="home">
-        <video muted autoplay>
-            <source src="splash.mp4" type="video/mp4">
-        </video>
-    </div>
-  </div>
   <div class="splashBehind">
 <!-- Navbar -->
 <div class="bt-top">
@@ -438,9 +430,23 @@
 </footer>
   </div>
 <script>
-  $('.splashScreen').delay(10000).animate({top: '-100%'}, 2000);
-  $('body').delay(12000).queue(function(){
+  $(document).ready(function () {    
+    if (!sessionStorage.getItem('splash')) {
+      sessionStorage.setItem('splash','yes');
+
+      var splashContainer = '<div class="splashScreen">' +
+                  '<video muted autoplay>' +
+                  '<source src="splash.mp4" type="video/mp4">' +
+                  '</video>' +
+                  '</div>';
+      $('body').append(splashContainer);
+      $('.splashScreen').delay(9500).animate({top: '-100%'}, 1500);
+      $('body').delay(11000).queue(function(){
+          $('body').addClass("visibleSplash");
+      });
+    } else {
       $('body').addClass("visibleSplash");
+    }
   });
 /*var myIndex1 = 0;
 carousel1();
