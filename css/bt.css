@@ -13,8 +13,9 @@
  }
 
  body {
-	overflow: hidden;
-     margin: 0
+	position: fixed; 
+    width: 100%;
+    margin: 0;
  }
 
  article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
@@ -2088,7 +2089,7 @@ video {
     object-fit: cover;
 }
 body.visibleSplash {
-	overflow: visible !important;
+	position: static;
 }
 .splashScreen {
 	width: 100%;
